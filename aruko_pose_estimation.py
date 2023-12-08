@@ -9,7 +9,7 @@ marker_plane_len = 0.22 # cm
 mtx, dist, rvecs, tvecs = np.zeros(1),np.zeros(1),np.zeros(1),np.zeros(1)
 camera_param = [mtx, dist, rvecs, tvecs]
 name_list = ['mtx', 'dist', 'rvecs', 'tvecs']
-path = '/home/adminuser/Рабочий стол/Novoselov/camera_calibration_data/'
+path = '/home/adminuser/Рабочий стол/camera_calibration_data/'
 for i in range(len(name_list)):
     with open(path+f'{name_list[i]}.pickle', 'rb') as handle:
         camera_param[i] = pickle.load(handle)
