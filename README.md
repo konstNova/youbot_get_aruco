@@ -123,4 +123,4 @@ for i in range(len(name_list)):
 ```
 
 [^1]: [Принципы оценки координат с использованием камеры](https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html)
-[^2]: [Калибровка камеры OpenCV] (https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
+[^2]: [Калибровка камеры OpenCV](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
