@@ -21,7 +21,7 @@ objp[0,:,:2] = np.mgrid[0:CHECKERBOARD[0], 0:CHECKERBOARD[1]].T.reshape(-1, 2)
 prev_img_shape = None
 
 # Извлечение пути отдельного изображения, хранящегося в данном каталоге
-images = glob.glob('/home/adminuser/Рабочий стол/Novoselov/screens_for_calibration/*.png')
+images = glob.glob('/home/adminuser/Рабочий стол/screens_for_calibration/*.png')
 counter = 0
 for fname in images:
     img = cv2.imread(fname)
@@ -64,7 +64,7 @@ ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.sh
 #Сохранение калибровочных параметров в файл
 save_list = [mtx, dist, rvecs, tvecs]
 name_list = ['mtx', 'dist', 'rvecs', 'tvecs']
-path = '/home/adminuser/Рабочий стол/Novoselov/camera_calibration_data/'
+path = '/home/adminuser/Рабочий стол/camera_calibration_data/'
 for i in range(len(name_list)):
     with open(path+f'{name_list[i]}.pickle', 'wb') as handle:
         pickle.dump(save_list[i], handle)
