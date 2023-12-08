@@ -29,7 +29,7 @@ while True:
     # сохранить скрин
     elif k%256 == 32:
         # SPACE pressed
-        folder_path = "/home/adminuser/Рабочий стол/Novoselov/video_screens/"
+        folder_path = "/home/adminuser/Рабочий стол/video_screens/"
         img_name = SCREEN_NAME + "_{}.png".format(img_counter)
         cv.imwrite(folder_path+img_name, frame)
         print("{} written!".format(img_name))
